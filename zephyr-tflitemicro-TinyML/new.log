@@ -1,0 +1,481 @@
+-- west build: making build dir /home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/build pristine
+-- west build: generating a build system
+Loading Zephyr default modules (Zephyr base).
+-- Application: /home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/cifar10
+-- CMake version: 3.28.1
+-- Found Python3: /home/sameer/ZEPHYR/.venv/bin/python3 (found suitable version "3.11.7", minimum required is "3.8") found components: Interpreter 
+-- Cache files will be written to: /home/sameer/.cache/zephyr
+-- Zephyr version: 3.5.99 (/home/sameer/ZEPHYR/zephyrproject/zephyr)
+-- Found west (found suitable version "1.2.0", minimum required is "0.14.0")
+CMake Warning at /home/sameer/ZEPHYR/zephyrproject/zephyr/cmake/modules/boards.cmake:84 (message):
+  Deprecated BOARD=esp32 name specified, board automatically changed to:
+  esp32_devkitc_wrover.
+Call Stack (most recent call first):
+  /home/sameer/ZEPHYR/zephyrproject/zephyr/cmake/modules/zephyr_default.cmake:129 (include)
+  /home/sameer/ZEPHYR/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)
+  /home/sameer/ZEPHYR/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:92 (include_boilerplate)
+  CMakeLists.txt:3 (find_package)
+
+
+-- Board: esp32_devkitc_wrover
+-- ZEPHYR_TOOLCHAIN_VARIANT not set, trying to locate Zephyr SDK
+-- Found host-tools: zephyr 0.16.4 (/opt/zephyr-sdk-0.16.4)
+-- Found toolchain: zephyr 0.16.4 (/opt/zephyr-sdk-0.16.4)
+-- Found Dtc: /opt/zephyr-sdk-0.16.4/sysroots/x86_64-pokysdk-linux/usr/bin/dtc (found suitable version "1.6.0", minimum required is "1.4.6") 
+-- Found BOARD.dts: /home/sameer/ZEPHYR/zephyrproject/zephyr/boards/xtensa/esp32_devkitc_wrover/esp32_devkitc_wrover.dts
+-- Generated zephyr.dts: /home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/build/zephyr/zephyr.dts
+-- Generated devicetree_generated.h: /home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/build/zephyr/include/generated/devicetree_generated.h
+-- Including generated dts.cmake file: /home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/build/zephyr/dts.cmake
+Parsing /home/sameer/ZEPHYR/zephyrproject/zephyr/Kconfig
+Loaded configuration '/home/sameer/ZEPHYR/zephyrproject/zephyr/boards/xtensa/esp32_devkitc_wrover/esp32_devkitc_wrover_defconfig'
+Merged configuration '/home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/cifar10/prj.conf'
+Configuration saved to '/home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/build/zephyr/.config'
+Kconfig header saved to '/home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/build/zephyr/include/generated/autoconf.h'
+-- Found GnuLd: /opt/zephyr-sdk-0.16.4/xtensa-espressif_esp32_zephyr-elf/bin/../lib/gcc/xtensa-espressif_esp32_zephyr-elf/12.2.0/../../../../xtensa-espressif_esp32_zephyr-elf/bin/ld.bfd (found version "2.38") 
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /opt/zephyr-sdk-0.16.4/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-gcc
+-- Using ccache: /usr/bin/ccache
+-- Configuring done (3.6s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/build
+-- west build: building application
+[1/326] Generating ../../../../include/generated/core-isa-dM.h
+[2/326] Preparing syscall dependency handling
+
+[3/326] Creating directories for 'EspPartitionTable'
+[4/326] Creating directories for 'EspIdfBootloader'
+[5/326] No download step for 'EspPartitionTable'
+[6/326] No download step for 'EspIdfBootloader'
+[7/326] Generating ../../../../include/generated/zsr.h
+[8/326] Generating include/generated/version.h
+-- Zephyr version: 3.5.99 (/home/sameer/ZEPHYR/zephyrproject/zephyr), build: zephyr-v3.5.0-3852-g14c68c943847
+[9/326] Generating misc/generated/syscalls_subdirs.trigger
+[10/326] No update step for 'EspPartitionTable'
+[11/326] No update step for 'EspIdfBootloader'
+[12/326] No patch step for 'EspIdfBootloader'
+[13/326] No patch step for 'EspPartitionTable'
+[14/326] No configure step for 'EspPartitionTable'
+[15/326] Performing build step for 'EspPartitionTable'
+[16/326] No install step for 'EspPartitionTable'
+[17/326] Completed 'EspPartitionTable'
+[18/326] Generating misc/generated/syscalls.json, misc/generated/struct_tags.json
+[19/326] Generating include/generated/syscall_dispatch.c, include/generated/syscall_list.h
+[20/326] Generating include/generated/driver-validation.h
+[21/326] Generating include/generated/kobj-types-enum.h, include/generated/otype-to-str.h, include/generated/otype-to-size.h
+[22/326] Building C object zephyr/CMakeFiles/offsets.dir/arch/xtensa/core/offsets/offsets.c.obj
+[23/326] Generating include/generated/offsets.h
+[24/326] Building C object zephyr/CMakeFiles/zephyr.dir/lib/cpp/abi/cpp_init.c.obj
+[25/326] Building C object zephyr/CMakeFiles/zephyr.dir/lib/cpp/abi/cpp_init_array.c.obj
+[26/326] Building C object zephyr/CMakeFiles/zephyr.dir/lib/cpp/abi/cpp_ctors.c.obj
+[27/326] Building C object zephyr/CMakeFiles/zephyr.dir/lib/cpp/abi/cpp_dtors.c.obj
+[28/326] Building C object zephyr/CMakeFiles/zephyr.dir/lib/utils/dec.c.obj
+[29/326] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/thread_entry.c.obj
+[30/326] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/sem.c.obj
+[31/326] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/printk.c.obj
+[32/326] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/assert.c.obj
+[33/326] Building C object zephyr/CMakeFiles/zephyr.dir/lib/utils/hex.c.obj
+[34/326] Building C object zephyr/CMakeFiles/zephyr.dir/misc/generated/configs.c.obj
+[35/326] Building C object zephyr/CMakeFiles/zephyr.dir/lib/utils/timeutil.c.obj
+[36/326] Building C object zephyr/CMakeFiles/zephyr.dir/subsys/tracing/tracing_none.c.obj
+[37/326] Building ASM object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/src/hal/windowspill_asm.S.obj
+[38/326] Building C object zephyr/CMakeFiles/zephyr.dir/soc/xtensa/espressif_esp32/esp32/loader.c.obj
+[39/326] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/cbprintf_packaged.c.obj
+[40/326] Building C object zephyr/CMakeFiles/zephyr.dir/lib/utils/bitarray.c.obj
+[41/326] Building C object zephyr/CMakeFiles/zephyr.dir/lib/heap/heap.c.obj
+[42/326] Building C object zephyr/CMakeFiles/zephyr.dir/lib/utils/rb.c.obj
+[43/326] Building C object zephyr/CMakeFiles/zephyr.dir/soc/xtensa/espressif_esp32/esp32/esp32-mp.c.obj
+[44/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/soc/esp32/i2s_periph.c.obj
+[45/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/soc/esp32/adc_periph.c.obj
+[46/326] Building C object zephyr/CMakeFiles/zephyr.dir/soc/xtensa/espressif_esp32/esp32/soc.c.obj
+[47/326] Building C object zephyr/CMakeFiles/zephyr.dir/lib/os/cbprintf_complete.c.obj
+[48/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/hal/uart_hal_iram.c.obj
+[49/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/soc/esp32/gpio_periph.c.obj
+[50/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/soc/esp32/rtc_io_periph.c.obj
+[51/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_system/port/soc/esp32/clk.c.obj
+[52/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/hal/uart_hal.c.obj
+[53/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_hw_support/port/esp32/rtc_init.c.obj
+[54/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_hw_support/port/esp32/rtc_clk_init.c.obj
+[55/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_hw_support/mac_addr.c.obj
+[56/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_hw_support/esp_clk.c.obj
+[57/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_timer/src/ets_timer_legacy.c.obj
+[58/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_hw_support/port/esp32/rtc_time.c.obj
+[59/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_hw_support/regi2c_ctrl.c.obj
+[60/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/log/log_noos.c.obj
+[61/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_hw_support/port/esp32/rtc_clk.c.obj
+[62/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_timer/src/esp_timer_impl_lac.c.obj
+[63/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/hal/interrupt_controller_hal.c.obj
+[64/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/log/log.c.obj
+[65/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/driver/periph_ctrl.c.obj
+[66/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/efuse/esp32/esp_efuse_fields.c.obj
+[67/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/efuse/esp32/esp_efuse_table.c.obj
+[68/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/hal/wdt_hal_iram.c.obj
+[69/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/hal/esp32/interrupt_descriptor_table.c.obj
+[70/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/efuse/esp32/esp_efuse_utility.c.obj
+[71/326] Performing configure step for 'EspIdfBootloader'
+-- Found Git: /usr/bin/git (found version "2.43.0") 
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /opt/zephyr-sdk-0.16.4/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/zephyr-sdk-0.16.4/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /opt/zephyr-sdk-0.16.4/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file /home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/build/esp-idf/build/sdkconfig
+-- Adding linker script /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/soc/esp32/ld/esp32.peripherals.ld
+-- Adding linker script /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/bootloader/subproject/main/ld/esp32/bootloader.ld
+-- Adding linker script /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/bootloader/subproject/main/ld/esp32/bootloader.rom.ld
+-- Components: bootloader bootloader_support efuse esp32 esp_common esp_hw_support esp_rom esp_system esptool_py freertos hal log main micro-ecc newlib partition_table soc spi_flash xtensa
+-- Component paths: /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/bootloader /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/bootloader_support /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/efuse /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp32 /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_common /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_hw_support /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_rom /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_system /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esptool_py /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/freertos /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/hal /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/log /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/bootloader/subproject/main /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/bootloader/subproject/components/micro-ecc /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/newlib /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/partition_table /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/soc /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/spi_flash /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/xtensa
+-- Configuring done (2.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/build/esp-idf/build/bootloader
+[72/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_timer/src/esp_timer.c.obj
+[73/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/esp_system/port/soc/esp32/reset_reason.c.obj
+[74/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/src/common/dport_access.c.obj
+[75/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/efuse/src/esp_efuse_api_key_esp32.c.obj
+[76/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/bootloader_support/src/bootloader_efuse_esp32.c.obj
+[77/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/src/stubs.c.obj
+[78/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/bootloader_support/src/bootloader_flash_config_esp32.c.obj
+[79/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/efuse/src/esp_efuse_utility.c.obj
+[80/326] Generating linker_zephyr_pre0.cmd
+[81/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/efuse/src/esp_efuse_api.c.obj
+[82/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp_shared/src/common/esp_system_api.c.obj
+[83/326] Building ASM object zephyr/arch/arch/xtensa/core/CMakeFiles/arch__xtensa__core.dir/window_vectors.S.obj
+[84/326] Building C object zephyr/arch/common/CMakeFiles/arch__common.dir/sw_isr_common.c.obj
+[85/326] Building ASM object zephyr/arch/arch/xtensa/core/CMakeFiles/arch__xtensa__core.dir/xtensa_asm2_util.S.obj
+[86/326] Building C object zephyr/arch/common/CMakeFiles/isr_tables.dir/isr_tables.c.obj
+[87/326] Building C object zephyr/arch/common/CMakeFiles/arch__common.dir/dynamic_isr.c.obj
+[88/326] Building C object zephyr/CMakeFiles/zephyr.dir/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp_shared/src/common/heap_caps.c.obj
+[89/326] Building ASM object zephyr/arch/arch/xtensa/core/CMakeFiles/arch__xtensa__core.dir/debug_helpers_asm.S.obj
+[90/326] Linking C static library zephyr/arch/common/libisr_tables.a
+[91/326] Building C object zephyr/arch/arch/xtensa/core/CMakeFiles/arch__xtensa__core.dir/xtensa_backtrace.c.obj
+[92/326] Building C object zephyr/arch/arch/xtensa/core/CMakeFiles/arch__xtensa__core.dir/cpu_idle.c.obj
+[93/326] Linking C static library zephyr/arch/common/libarch__common.a
+[94/326] Building C object zephyr/arch/arch/xtensa/core/CMakeFiles/arch__xtensa__core.dir/fatal.c.obj
+[95/326] Linking C static library zephyr/libzephyr.a
+[96/326] Building C object zephyr/arch/arch/xtensa/core/CMakeFiles/arch__xtensa__core.dir/thread.c.obj
+[97/326] Building C object zephyr/arch/arch/xtensa/core/CMakeFiles/arch__xtensa__core.dir/irq_manage.c.obj
+[98/326] Building C object zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/source/stdlib/abort.c.obj
+[99/326] Building C object zephyr/lib/libc/picolibc/CMakeFiles/lib__libc__picolibc.dir/libc-hooks.c.obj
+[100/326] Building C object zephyr/subsys/random/CMakeFiles/subsys__random.dir/rand32_entropy_device.c.obj
+[101/326] Linking C static library zephyr/lib/libc/picolibc/liblib__libc__picolibc.a
+[102/326] Building C object zephyr/drivers/console/CMakeFiles/drivers__console.dir/uart_console.c.obj
+[103/326] Linking C static library zephyr/subsys/random/libsubsys__random.a
+[104/326] Building C object zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/source/stdlib/malloc.c.obj
+[105/326] Linking C static library zephyr/drivers/console/libdrivers__console.a
+[106/326] Building C object zephyr/drivers/entropy/CMakeFiles/drivers__entropy.dir/entropy_esp32.c.obj
+[107/326] Linking C static library zephyr/lib/libc/common/liblib__libc__common.a
+[108/326] Building C object zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/common.c.obj
+[109/326] Linking C static library zephyr/drivers/entropy/libdrivers__entropy.a
+[110/326] Building C object zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/clock_control_esp32.c.obj
+[111/326] Linking C static library zephyr/drivers/clock_control/libdrivers__clock_control.a
+[112/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/signal/micro/kernels/fft_flexbuffers_generated_data.cc.obj
+[113/326] Building C object zephyr/drivers/timer/CMakeFiles/drivers__timer.dir/sys_clock_init.c.obj
+[114/326] Building C object zephyr/drivers/serial/CMakeFiles/drivers__serial.dir/uart_esp32.c.obj
+[115/326] Building C object zephyr/drivers/timer/CMakeFiles/drivers__timer.dir/xtensa_sys_timer.c.obj
+[116/326] Linking C static library zephyr/drivers/serial/libdrivers__serial.a
+[117/326] Building C object zephyr/drivers/interrupt_controller/CMakeFiles/drivers__interrupt_controller.dir/intc_esp32.c.obj
+[118/326] Linking C static library zephyr/drivers/timer/libdrivers__timer.a
+[119/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/signal/micro/kernels/window_flexbuffers_generated_data.cc.obj
+[120/326] Linking C static library zephyr/drivers/interrupt_controller/libdrivers__interrupt_controller.a
+[121/326] Building C object zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/pinctrl_esp32.c.obj
+[122/326] Linking C static library zephyr/drivers/pinctrl/libdrivers__pinctrl.a
+[123/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/signal/src/rfft_float.cc.obj
+[124/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/signal/src/rfft_int16.cc.obj
+[125/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/signal/src/rfft_int32.cc.obj
+[126/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/signal/src/window.cc.obj
+[127/326] Building C object zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir/gpio_esp32.c.obj
+[128/326] Building C object zephyr/arch/arch/xtensa/core/CMakeFiles/arch__xtensa__core.dir/vector_handlers.c.obj
+[129/326] Linking C static library zephyr/drivers/gpio/libdrivers__gpio.a
+[130/326] Linking C static library zephyr/arch/arch/xtensa/core/libarch__xtensa__core.a
+[131/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/tensorflow/lite/micro/debug_log.cc.obj
+[132/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/signal/src/kiss_fft_wrappers/kiss_fft_float.cc.obj
+[133/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/tensorflow/lite/core/c/common.cc.obj
+[134/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/tensorflow/lite/array.cc.obj
+FAILED: modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/tensorflow/lite/array.cc.obj 
+ccache /opt/zephyr-sdk-0.16.4/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-g++ -DCONFIG_SPI_FLASH_ROM_DRIVER_PATCH -DCONFIG_SPI_FLASH_USE_LEGACY_IMPL -DESP_PLATFORM -DKERNEL -DK_HEAP_MEM_POOL_SIZE=4096 -DPICOLIBC_LONG_LONG_PRINTF_SCANF -D_FORTIFY_SOURCE=1 -D_POSIX_C_SOURCE=200809 -D__LINUX_ERRNO_EXTENSIONS__ -D__ZEPHYR__=1 -I/home/sameer/ZEPHYR/zephyrproject/zephyr/include -I/home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/build/zephyr/include/generated -I/home/sameer/ZEPHYR/zephyrproject/zephyr/soc/xtensa/espressif_esp32/esp32 -I/home/sameer/ZEPHYR/zephyrproject/zephyr/soc/xtensa/espressif_esp32/common/include -I/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/. -I/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/third_party_static/gemmlowp -I/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/third_party_static/flatbuffers/include -I/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/third_party_static/ruy -I/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/third_party_static/kissfft -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/include/bt -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/include/crypto -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../esp_shared/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../esp_shared/include/wifi -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../esp_shared/components/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/hal/esp32/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/hal/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/hal/platform_port/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_hw_support/include/soc -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_hw_support/port/esp32 -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_hw_support/port/esp32/private_include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_hw_support/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_common/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_pm/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_rom/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_rom/include/esp32/rom -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_rom/esp32/ld -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp32/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/soc/esp32/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/xtensa/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/xtensa/esp32/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/soc/include/soc -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/soc/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/soc/src/esp32/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/driver/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/driver/esp32/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_phy/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_phy/include/esp32 -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_phy/esp32/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_wifi/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/efuse/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/efuse/private_include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/efuse/esp32/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/efuse/esp32/private_include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_system/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_system/port/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_system/port/public_compat -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_wifi/esp32/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_timer/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_timer/private_include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_netif/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/esp_event/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/log/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/wpa_supplicant/esp_supplicant/src -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/wpa_supplicant/esp_supplicant/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/wpa_supplicant/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/wpa_supplicant/include/esp_supplicant -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/wpa_supplicant/port/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/wpa_supplicant/src -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/wpa_supplicant/src/crypto -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/wpa_supplicant/src/utils -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/wpa_supplicant/src/eap_peer -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/spi_flash/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/spi_flash/include/spi_flash -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/spi_flash/private_include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/bootloader_support/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/bootloader_support/include_bootloader -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/heap/include -I/home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/zephyr/esp32/../../components/mbedtls/port/include -isystem /home/sameer/ZEPHYR/zephyrproject/zephyr/lib/libc/common/include -fno-strict-aliasing -Os -fcheck-new -std=c++11 -fno-exceptions -fno-rtti -imacros /home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/build/zephyr/include/generated/autoconf.h -fno-common -g -gdwarf-4 -fdiagnostics-color=always --sysroot=/opt/zephyr-sdk-0.16.4/xtensa-espressif_esp32_zephyr-elf/xtensa-espressif_esp32_zephyr-elf -imacros /home/sameer/ZEPHYR/zephyrproject/zephyr/include/zephyr/toolchain/zephyr_stdint.h -Wall -Wformat -Wformat-security -Wno-format-zero-length -Wpointer-arith -Wexpansion-to-defined -Wno-unused-but-set-variable -fno-pic -fno-pie -fno-asynchronous-unwind-tables -fno-reorder-functions --param=min-pagesize=0 -fno-defer-pop -fmacro-prefix-map=/home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/cifar10=CMAKE_SOURCE_DIR -fmacro-prefix-map=/home/sameer/ZEPHYR/zephyrproject/zephyr=ZEPHYR_BASE -fmacro-prefix-map=/home/sameer/ZEPHYR/zephyrproject=WEST_TOPDIR -ffunction-sections -fdata-sections -mlongcalls --specs=picolibc.specs -Wno-unused-variable -Wno-maybe-uninitialized -fno-threadsafe-statics -MD -MT modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/tensorflow/lite/array.cc.obj -MF modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/tensorflow/lite/array.cc.obj.d -o modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/tensorflow/lite/array.cc.obj -c /home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/tensorflow/lite/array.cc
+In file included from /home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/tensorflow/lite/array.cc:16:
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:93:29: error: 'conditional_t' in namespace 'std' does not name a template type; did you mean 'conditional'?
+   93 |           class Type = std::conditional_t<std::is_same<T, void>::value, U, T>>
+      |                             ^~~~~~~~~~~~~
+      |                             conditional
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:93:42: error: expected '>' before '<' token
+   93 |           class Type = std::conditional_t<std::is_same<T, void>::value, U, T>>
+      |                                          ^
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:129:14: error: 'decay_t' in namespace 'std' does not name a template type; did you mean 'decay'?
+  129 |         std::decay_t<decltype(*std::declval<Container>().data())>,
+      |              ^~~~~~~
+      |              decay
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:129:21: error: expected '>' before '<' token
+  129 |         std::decay_t<decltype(*std::declval<Container>().data())>,
+      |                     ^
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:133:22: error: 'Type' was not declared in this scope
+  133 | TfLiteArrayUniquePtr<Type> BuildTfLiteArray(const Container& values) {
+      |                      ^~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:133:26: error: template argument 1 is invalid
+  133 | TfLiteArrayUniquePtr<Type> BuildTfLiteArray(const Container& values) {
+      |                          ^
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h: In function 'int tflite::BuildTfLiteArray(const Container&)':
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:134:27: error: 'Type' was not declared in this scope
+  134 |   return BuildTfLiteArray<Type>(static_cast<int>(values.size()), values.data());
+      |                           ^~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h: In function 'tflite::IntArrayUniquePtr tflite::BuildTfLiteArray(const TfLiteIntArray&)':
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:146:26: error: no matching function for call to 'BuildTfLiteArray(const int&, const int [])'
+  146 |   return BuildTfLiteArray(other.size, other.data);
+      |          ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:71:25: note: candidate: 'template<class T> tflite::TfLiteArrayUniquePtr<T> tflite::BuildTfLiteArray(int)'
+   71 | TfLiteArrayUniquePtr<T> BuildTfLiteArray(int size);
+      |                         ^~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:71:25: note:   template argument deduction/substitution failed:
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:146:26: note:   candidate expects 1 argument, 2 provided
+  146 |   return BuildTfLiteArray(other.size, other.data);
+      |          ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:94:28: note: candidate: 'template<class T, class U, class Type> tflite::TfLiteArrayUniquePtr<Type> tflite::BuildTfLiteArray(int, const U*)'
+   94 | TfLiteArrayUniquePtr<Type> BuildTfLiteArray(const int size,
+      |                            ^~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:94:28: note:   template argument deduction/substitution failed:
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:114:25: note: candidate: 'template<class T, unsigned int N> tflite::TfLiteArrayUniquePtr<T> tflite::BuildTfLiteArray(const T (&)[N])'
+  114 | TfLiteArrayUniquePtr<T> BuildTfLiteArray(const T (&values)[N]) {
+      |                         ^~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:114:25: note:   template argument deduction/substitution failed:
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:146:26: note:   mismatched types 'const T [N]' and 'const int'
+  146 |   return BuildTfLiteArray(other.size, other.data);
+      |          ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:133:28: note: candidate: 'template<class T, class Container, class ElementType> int tflite::BuildTfLiteArray(const Container&)'
+  133 | TfLiteArrayUniquePtr<Type> BuildTfLiteArray(const Container& values) {
+      |                            ^~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:133:28: note:   template argument deduction/substitution failed:
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:146:26: note:   candidate expects 1 argument, 2 provided
+  146 |   return BuildTfLiteArray(other.size, other.data);
+      |          ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:139:25: note: candidate: 'template<class T> tflite::TfLiteArrayUniquePtr<T> tflite::BuildTfLiteArray(const std::initializer_list<_Tp>&)'
+  139 | TfLiteArrayUniquePtr<T> BuildTfLiteArray(
+      |                         ^~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:139:25: note:   template argument deduction/substitution failed:
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:146:26: note:   mismatched types 'const std::initializer_list<_Tp>' and 'const int'
+  146 |   return BuildTfLiteArray(other.size, other.data);
+      |          ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:145:26: note: candidate: 'tflite::IntArrayUniquePtr tflite::BuildTfLiteArray(const TfLiteIntArray&)'
+  145 | inline IntArrayUniquePtr BuildTfLiteArray(const TfLiteIntArray& other) {
+      |                          ^~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:145:26: note:   candidate expects 1 argument, 2 provided
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h: In function 'tflite::FloatArrayUniquePtr tflite::BuildTfLiteArray(const TfLiteFloatArray&)':
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:151:26: error: no matching function for call to 'BuildTfLiteArray(const int&, const float [])'
+  151 |   return BuildTfLiteArray(other.size, other.data);
+      |          ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:71:25: note: candidate: 'template<class T> tflite::TfLiteArrayUniquePtr<T> tflite::BuildTfLiteArray(int)'
+   71 | TfLiteArrayUniquePtr<T> BuildTfLiteArray(int size);
+      |                         ^~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:71:25: note:   template argument deduction/substitution failed:
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:151:26: note:   candidate expects 1 argument, 2 provided
+  151 |   return BuildTfLiteArray(other.size, other.data);
+      |          ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:94:28: note: candidate: 'template<class T, class U, class Type> tflite::TfLiteArrayUniquePtr<Type> tflite::BuildTfLiteArray(int, const U*)'
+   94 | TfLiteArrayUniquePtr<Type> BuildTfLiteArray(const int size,
+      |                            ^~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:94:28: note:   template argument deduction/substitution failed:
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:114:25: note: candidate: 'template<class T, unsigned int N> tflite::TfLiteArrayUniquePtr<T> tflite::BuildTfLiteArray(const T (&)[N])'
+  114 | TfLiteArrayUniquePtr<T> BuildTfLiteArray(const T (&values)[N]) {
+      |                         ^~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:114:25: note:   template argument deduction/substitution failed:
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:151:26: note:   mismatched types 'const T [N]' and 'const int'
+  151 |   return BuildTfLiteArray(other.size, other.data);
+      |          ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:133:28: note: candidate: 'template<class T, class Container, class ElementType> int tflite::BuildTfLiteArray(const Container&)'
+  133 | TfLiteArrayUniquePtr<Type> BuildTfLiteArray(const Container& values) {
+      |                            ^~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:133:28: note:   template argument deduction/substitution failed:
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:151:26: note:   candidate expects 1 argument, 2 provided
+  151 |   return BuildTfLiteArray(other.size, other.data);
+      |          ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:139:25: note: candidate: 'template<class T> tflite::TfLiteArrayUniquePtr<T> tflite::BuildTfLiteArray(const std::initializer_list<_Tp>&)'
+  139 | TfLiteArrayUniquePtr<T> BuildTfLiteArray(
+      |                         ^~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:139:25: note:   template argument deduction/substitution failed:
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:151:26: note:   mismatched types 'const std::initializer_list<_Tp>' and 'const int'
+  151 |   return BuildTfLiteArray(other.size, other.data);
+      |          ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:145:26: note: candidate: 'tflite::IntArrayUniquePtr tflite::BuildTfLiteArray(const TfLiteIntArray&)'
+  145 | inline IntArrayUniquePtr BuildTfLiteArray(const TfLiteIntArray& other) {
+      |                          ^~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:145:26: note:   candidate expects 1 argument, 2 provided
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:150:28: note: candidate: 'tflite::FloatArrayUniquePtr tflite::BuildTfLiteArray(const TfLiteFloatArray&)'
+  150 | inline FloatArrayUniquePtr BuildTfLiteArray(const TfLiteFloatArray& other) {
+      |                            ^~~~~~~~~~~~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/array.h:150:28: note:   candidate expects 1 argument, 2 provided
+[135/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/signal/src/kiss_fft_wrappers/kiss_fft_int16.cc.obj
+[136/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/signal/src/kiss_fft_wrappers/kiss_fft_int32.cc.obj
+[137/326] Performing build step for 'EspIdfBootloader'
+[1/97] Generating project_elf_src_esp32.c
+[2/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/soc_include_legacy_warn.c.obj
+[3/97] Building C object CMakeFiles/bootloader.elf.dir/project_elf_src_esp32.c.obj
+[4/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/adc_periph.c.obj
+[5/97] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.obj
+[6/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/dac_periph.c.obj
+[7/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/i2c_periph.c.obj
+[8/97] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/cpu_hal.c.obj
+[9/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.obj
+[10/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/gpio_periph.c.obj
+[11/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/interrupts.c.obj
+[12/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/i2s_periph.c.obj
+[13/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/ledc_periph.c.obj
+[14/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/lcd_periph.c.obj
+[15/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/pcnt_periph.c.obj
+[16/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/mcpwm_periph.c.obj
+[17/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sigmadelta_periph.c.obj
+[18/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdmmc_periph.c.obj
+[19/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rmt_periph.c.obj
+[20/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/touch_sensor_periph.c.obj
+[21/97] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj
+[22/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/timer_periph.c.obj
+[23/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_io_periph.c.obj
+[24/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdio_slave_periph.c.obj
+[25/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/uart_periph.c.obj
+[26/97] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/spi_periph.c.obj
+[27/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_init.c.obj
+[28/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_mem.c.obj
+[29/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common_loader.c.obj
+[30/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random_esp32.c.obj
+[31/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj
+[32/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/secure_boot.c.obj
+[33/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj
+[34/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj
+[35/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_qio_mode.c.obj
+[36/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj
+[37/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_loader.c.obj
+[38/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console_loader.c.obj
+[39/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse_esp32.c.obj
+[40/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash.c.obj
+[41/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_panic.c.obj
+[42/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.obj
+[43/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_flash_config_esp32.c.obj
+[44/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.obj
+[45/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_soc.c.obj
+[46/97] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32/esp_efuse_table.c.obj
+[47/97] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/esp32/spi_flash_rom_patch.c.obj
+[48/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj
+[49/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_sha.c.obj
+[50/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj
+[51/97] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32/esp_efuse_fields.c.obj
+[52/97] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32/esp_efuse_utility.c.obj
+[53/97] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/esp_err.c.obj
+[54/97] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu_util.c.obj
+[55/97] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/compare_set.c.obj
+[56/97] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_fields.c.obj
+[57/97] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api.c.obj
+[58/97] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_esp32.c.obj
+[59/97] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api_key_esp32.c.obj
+[60/97] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_pm.c.obj
+[61/97] Building C object esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.obj
+[62/97] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk_init.c.obj
+[63/97] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_utility.c.obj
+[64/97] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/chip_info.c.obj
+[65/97] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_time.c.obj
+[66/97] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj
+[67/97] Building C object esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xt_trax.c.obj
+[68/97] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj
+[69/97] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_tjpgd.c.obj
+[70/97] Building ASM object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_longjmp.S.obj
+[71/97] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_init.c.obj
+[72/97] Building C object esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.obj
+[73/97] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_uart.c.obj
+[74/97] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_sleep.c.obj
+[75/97] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_wdt.c.obj
+[76/97] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj
+[77/97] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/bootloader_start.c.obj
+[78/97] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj
+[79/97] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk.c.obj
+[80/97] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj
+[81/97] Linking C static library esp-idf/log/liblog.a
+[82/97] Building C object esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/uECC_verify_antifault.c.obj
+[83/97] Linking C static library esp-idf/esp_rom/libesp_rom.a
+[84/97] Linking C static library esp-idf/esp_common/libesp_common.a
+[85/97] Linking C static library esp-idf/xtensa/libxtensa.a
+[86/97] Linking C static library esp-idf/esp_hw_support/libesp_hw_support.a
+[87/97] Linking C static library esp-idf/esp_system/libesp_system.a
+[88/97] Linking C static library esp-idf/efuse/libefuse.a
+[89/97] Linking C static library esp-idf/bootloader_support/libbootloader_support.a
+[90/97] Linking C static library esp-idf/spi_flash/libspi_flash.a
+[91/97] Linking C static library esp-idf/micro-ecc/libmicro-ecc.a
+[92/97] Linking C static library esp-idf/soc/libsoc.a
+[93/97] Linking C static library esp-idf/hal/libhal.a
+[94/97] Linking C static library esp-idf/main/libmain.a
+[95/97] Linking C executable bootloader.elf
+[96/97] Generating binary image from built executable
+esptool.py v4.5
+Creating esp32 image...
+Merged 1 ELF section
+Successfully created esp32 image.
+Generated /home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/build/esp-idf/build/bootloader/bootloader.bin
+[97/97] cd /home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/build/esp-idf/build/bootloader/esp-idf/esptool_py && /home/sameer/ZEPHYR/.venv/bin/python3 /home/sameer/ZEPHYR/zephyrproject/modules/hal/espressif/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/build/esp-idf/build/bootloader/bootloader.bin
+Bootloader binary size 0x6510 bytes. 0xaf0 bytes (10%) free.
+[138/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/signal/micro/kernels/rfft.cc.obj
+In file included from /home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/kernels/internal/tensor_ctypes.h:21,
+                 from /home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/signal/micro/kernels/rfft.cc:23:
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/core/macros.h:70:1: warning: inline variables are only available with '-std=c++17' or '-std=gnu++17' [-Wc++17-extensions]
+   70 | inline constexpr unsigned int flatbuffer_size_max = 2147483648;
+      | ^~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/core/macros.h:72:1: warning: inline variables are only available with '-std=c++17' or '-std=gnu++17' [-Wc++17-extensions]
+   72 | inline constexpr char tflite_metadata_buffer_location[] = "buffer_location";
+      | ^~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/core/macros.h:74:1: warning: inline variables are only available with '-std=c++17' or '-std=gnu++17' [-Wc++17-extensions]
+   74 | inline constexpr char tflite_metadata_min_runtime_version[] =
+      | ^~~~~~
+[139/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/tensorflow/lite/micro/memory_helpers.cc.obj
+In file included from /home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/kernels/internal/tensor_ctypes.h:21,
+                 from /home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/tensorflow/lite/micro/memory_helpers.cc:23:
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/core/macros.h:70:1: warning: inline variables are only available with '-std=c++17' or '-std=gnu++17' [-Wc++17-extensions]
+   70 | inline constexpr unsigned int flatbuffer_size_max = 2147483648;
+      | ^~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/core/macros.h:72:1: warning: inline variables are only available with '-std=c++17' or '-std=gnu++17' [-Wc++17-extensions]
+   72 | inline constexpr char tflite_metadata_buffer_location[] = "buffer_location";
+      | ^~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/core/macros.h:74:1: warning: inline variables are only available with '-std=c++17' or '-std=gnu++17' [-Wc++17-extensions]
+   74 | inline constexpr char tflite_metadata_min_runtime_version[] =
+      | ^~~~~~
+[140/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/signal/micro/kernels/window.cc.obj
+In file included from /home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/kernels/internal/tensor_ctypes.h:21,
+                 from /home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/signal/micro/kernels/window.cc:20:
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/core/macros.h:70:1: warning: inline variables are only available with '-std=c++17' or '-std=gnu++17' [-Wc++17-extensions]
+   70 | inline constexpr unsigned int flatbuffer_size_max = 2147483648;
+      | ^~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/core/macros.h:72:1: warning: inline variables are only available with '-std=c++17' or '-std=gnu++17' [-Wc++17-extensions]
+   72 | inline constexpr char tflite_metadata_buffer_location[] = "buffer_location";
+      | ^~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/core/macros.h:74:1: warning: inline variables are only available with '-std=c++17' or '-std=gnu++17' [-Wc++17-extensions]
+   74 | inline constexpr char tflite_metadata_min_runtime_version[] =
+      | ^~~~~~
+[141/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/python/tflite_micro/python_ops_resolver.cc.obj
+In file included from /home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/kernels/internal/common.h:29,
+                 from /home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/kernels/internal/reference/integer_ops/pooling.h:21,
+                 from /home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/micro/kernels/pooling.h:23,
+                 from /home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/micro/micro_mutable_op_resolver.h:32,
+                 from /home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./python/tflite_micro/python_ops_resolver.h:19,
+                 from /home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/python/tflite_micro/python_ops_resolver.cc:16:
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/core/macros.h:70:1: warning: inline variables are only available with '-std=c++17' or '-std=gnu++17' [-Wc++17-extensions]
+   70 | inline constexpr unsigned int flatbuffer_size_max = 2147483648;
+      | ^~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/core/macros.h:72:1: warning: inline variables are only available with '-std=c++17' or '-std=gnu++17' [-Wc++17-extensions]
+   72 | inline constexpr char tflite_metadata_buffer_location[] = "buffer_location";
+      | ^~~~~~
+/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/./tensorflow/lite/core/macros.h:74:1: warning: inline variables are only available with '-std=c++17' or '-std=gnu++17' [-Wc++17-extensions]
+   74 | inline constexpr char tflite_metadata_min_runtime_version[] =
+      | ^~~~~~
+[142/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/tensorflow/lite/micro/fake_micro_context.cc.obj
+[143/326] Building CXX object modules/tflite-micro/CMakeFiles/modules__tflite-micro.dir/home/sameer/ZEPHYR/zephyrproject/optional/modules/lib/tflite-micro/tensorflow/lite/micro/micro_allocation_info.cc.obj
+ninja: build stopped: subcommand failed.
+FATAL ERROR: command exited with status 1: /usr/bin/cmake --build /home/sameer/ZEPHYR/zephyrproject/zephyr/samples/sameer/tflite-micro/build

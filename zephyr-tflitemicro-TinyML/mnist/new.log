@@ -1,0 +1,2 @@
+ERROR: source directory cifar10 does not exist
+FATAL ERROR: refusing to proceed without --force due to above error
